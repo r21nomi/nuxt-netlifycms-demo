@@ -2,18 +2,23 @@
     <form
             class="contactForm"
             name="contact"
-            method="post"
+            method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
     >
-        <input type="hidden" name="form-name" value="contact" />
         <label>
-            <input type="text" v-model="subject" name="subject" />
+            <span class="label">Your Name</span>
+            <input type="text" v-model="name" name="name" placeholder="name" />
         </label>
         <label>
-            <textarea v-model="message" name="message" />
+            <span class="label">Your Email</span>
+            <input type="text" v-model="email" name="email" placeholder="email" />
         </label>
-        <button>Submit</button>
+        <label>
+            <span class="label">Message</span>
+            <textarea v-model="message" name="message" placeholder="message" />
+        </label>
+        <button type="submit">Submit</button>
     </form>
 </template>
 <script>
@@ -21,7 +26,8 @@
         name: "ContactForm",
         data () {
             return {
-                subject: "",
+                name: "",
+                email: "",
                 message: ""
             }
         }
@@ -30,7 +36,27 @@
 
 <style scoped>
     .contactForm {
+        width: 100%;
         display: flex;
         flex-direction: column;
+    }
+    .label {
+        display: block;
+        font-size: 12px;
+    }
+    label:nth-child(n + 2) {
+        margin-top: 20px;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-top: 5px;
+    }
+    button {
+        width: 100px;
+        margin: 20px auto 0;
+        padding: 10px;
+        box-sizing: border-box;
     }
 </style>

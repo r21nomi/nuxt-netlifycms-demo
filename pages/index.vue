@@ -8,7 +8,10 @@
             <h2 class="posts-list-title">Posts</h2>
             <p class="post-link" v-for="post in blogPosts"><n-link :to="post._path">{{post.title}}</n-link></p>
         </div>
-        <ContactForm/>
+        <div class="contactContainer">
+            <h2 class="title">Contact</h2>
+            <ContactForm/>
+        </div>
     </div>
 </template>
 
@@ -48,5 +51,15 @@
     }
     .main-header {
         text-align: center;
+    }
+    .contactContainer {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .contactContainer .title {
+        text-align: center;
+    }
+    .contactContainer .contactForm {
+        margin-top: 10px;
     }
 </style>
