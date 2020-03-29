@@ -1,0 +1,8 @@
+node_modules
+dist
+.env
+.nuxt
+.serverless
+
+.idea
+.DS_Store
