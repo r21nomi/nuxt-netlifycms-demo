@@ -6,6 +6,9 @@
             data-netlify="true"
             data-netlify-honeypot="bot-field"
     >
+        <!-- Avoid the error "Failed to execute 'appendChild' on 'Node'". -->
+        <!-- https://qiita.com/yahsan2/items/a70c4c8f617ee9b1f9ff -->
+        <input type="hidden" name="form-name" value="contact">
         <label>
             <span class="label">Your Name</span>
             <input type="text" v-model="name" name="name" placeholder="name" />
