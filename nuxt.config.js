@@ -50,16 +50,13 @@ export default {
     */
     modules: [
         '@nuxtjs/markdownit',
-        '@nuxtjs/axios', // Doc: https://axios.nuxtjs.org/usage
-        '@nuxtjs/pwa',
+        '@nuxtjs/axios' // Doc: https://axios.nuxtjs.org/usage
     ],
     markdownit: {
         injected: true,
         preset: 'default',
         breaks: true,
         html: true
-
-
     },
     /*
     ** Axios module configuration
