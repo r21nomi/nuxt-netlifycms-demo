@@ -10,25 +10,29 @@
 </template>
 
 <script lang="ts">
-export default {
+import { Component, Vue } from "nuxt-property-decorator";
+
+@Component({
+    components: {},
+})
+export default class BlogPage extends Vue {
+    private date: string = "";
+    private body: string = "";
+    private title: string = "";
+    private author: string = "";
+
     async asyncData({ params }) {
-        /*
-        Interestingly, if you just return the raw post object as it is imported,
-        Nuxt fails to build, but if you create your own object with the data you
-        need, it works. The issue is discussed here, but apparently it wasn't
-        completely fixed. https://github.com/nuxt-community/apollo-module/issues/163
-        However, I like the code more this way anyway--it's more explicit what
-        you're bringing in from the JSON.
-        */
-        const post = await import(`~/content/blog/${params.slug}.json`);
+        const post = await import(
+            `~/content/blog/${(params as any).slug}.json`
+        );
         return {
             date: post.date,
             body: post.body,
             title: post.title,
             author: post.author,
         };
-    },
-};
+    }
+}
 </script>
 
 <style scoped lang="stylus">

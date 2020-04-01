@@ -16,9 +16,12 @@
 </template>
 
 <script lang="ts">
-export default {
+import { Vue, Component } from "nuxt-property-decorator";
+
+@Component({
     components: {},
-};
+})
+export default class extends Vue {}
 </script>
 
 <style scoped lang="stylus">

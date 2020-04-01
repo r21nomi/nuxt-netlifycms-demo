@@ -31,16 +31,16 @@
 </template>
 
 <script lang="ts">
-export default {
-    name: "ContactForm",
-    data() {
-        return {
-            name: "",
-            email: "",
-            message: "",
-        };
-    },
-};
+import { Vue, Component } from "nuxt-property-decorator";
+
+@Component({
+    components: {},
+})
+export default class ContactForm extends Vue {
+    private name: string = "";
+    private email: string = "";
+    private message: string = "";
+}
 </script>
 
 <style scoped lang="stylus">

@@ -22,21 +22,25 @@
 </template>
 
 <script lang="ts">
+import { Vue, Component } from "nuxt-property-decorator";
 import ContactForm from "~/components/ContactForm.vue";
 
-export default {
+import { Blog, SiteInfo } from "~/types/entity";
+
+@Component({
     components: {
         ContactForm,
     },
-    computed: {
-        blogPosts() {
-            return this.$store.state.blogPosts;
-        },
-        siteInfo() {
-            return this.$store.state.siteInfo;
-        },
-    },
-};
+})
+export default class extends Vue {
+    private get blogPosts(): Blog[] {
+        return this.$store.state.blogPosts;
+    }
+
+    private get siteInfo(): SiteInfo {
+        return this.$store.state.siteInfo;
+    }
+}
 </script>
 
 <style scoped lang="stylus">
