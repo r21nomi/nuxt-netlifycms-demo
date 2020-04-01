@@ -37,29 +37,29 @@
     }
 </script>
 
-<style scoped>
-    .contactForm {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    .label {
-        display: block;
-        font-size: 12px;
-    }
-    label:nth-child(n + 2) {
-        margin-top: 20px;
-    }
-    input, textarea {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-        margin-top: 5px;
-    }
-    button {
-        width: 100px;
-        margin: 20px auto 0;
-        padding: 10px;
-        box-sizing: border-box;
-    }
+<style scoped lang="stylus">
+    .contactForm
+        width 100%
+        display flex
+        flex-direction column
+
+    .label
+        display block
+        font-size 12px
+
+    label
+        &:nth-child(n + 2)
+            margin-top 20px
+
+    input, textarea
+        width 100%
+        padding 10px
+        box-sizing border-box
+        margin-top 5px
+
+    button
+        width 100px
+        margin 20px auto 0
+        padding 10px
+        box-sizing border-box
 </style>
