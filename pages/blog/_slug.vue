@@ -29,21 +29,19 @@
     }
 </script>
 
-<style lang="css" scoped>
-    .back, .date, .body {
-        padding-top: 10px;
-    }
-    .back-link {
-        text-decoration: underline;
-        color: #3b8070;
-        cursor: pointer;
-    }
+<style scoped lang="stylus">
+    .back, .date, .body
+        padding-top 10px
 
-    .date {
-        color: darkgray;
-    }
-    .post {
-        background-color: whitesmoke;
-        padding: 20px;
-    }
+    .back-link
+        text-decoration underline
+        color #3b8070
+        cursor pointer
+
+    .date
+        color darkgray
+
+    .post
+        background-color whitesmoke
+        padding 20px
 </style>

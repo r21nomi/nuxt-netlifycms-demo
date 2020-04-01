@@ -12,10 +12,6 @@ console.log(dynamicRoutes);
 
 export default {
     mode: 'universal',
-
-    /*
-    ** Headers of the page
-    */
     head: {
         title: info.sitename,
         meta: [
@@ -27,51 +23,28 @@ export default {
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     },
-
-    /*
-    ** Customize the progress-bar color
-    */
     loading: { color: '#fff' },
-
-    /*
-    ** Global CSS
-    */
-    css: [
-    ],
-
-    /*
-    ** Plugins to load before mounting the App
-    */
-    plugins: [
-    ],
-
-    /*
-    ** Nuxt.js modules
-    */
+    css: ["@/assets/style/common.styl"],
+    plugins: [],
     modules: [
         '@nuxtjs/markdownit',
-        '@nuxtjs/axios' // Doc: https://axios.nuxtjs.org/usage
+        '@nuxtjs/axios',
+        'nuxt-webfontloader'
     ],
+    webfontloader: {
+        google: {
+            families: ["Noto+Sans+JP:400,700,900&display=swap&subset=japanese"]
+        }
+    },
     markdownit: {
         injected: true,
         preset: 'default',
         breaks: true,
         html: true
     },
-    /*
-    ** Axios module configuration
-    */
     axios: {
-        // See https://github.com/nuxt-community/axios-module#options
     },
-
-    /*
-    ** Build configuration
-    */
     build: {
-        /*
-        ** You can extend webpack config here
-        */
         extend(config, ctx) {
         },
     },
