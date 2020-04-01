@@ -1,7 +1,7 @@
-import pkg from './package'
-import info from './content/setup/info'
-import path from 'path'
-import glob from 'glob'
+import pkg from './package';
+import info from './content/setup/info';
+import path from 'path';
+import glob from 'glob';
 
 var dynamicRoutes = getDynamicPaths({
     '/blog': 'blog/*.json',
