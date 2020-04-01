@@ -18,9 +18,7 @@
                 <!-- This is not an n-link because the NetlifyCMS admin page is static.
                 If you make it an n-link, you'll get a "Page could not be found" when
                 you click it. -->
-                <a href="/admin">
-                    NetlifyCMS Admin Login
-                </a>
+                <a href="/admin">NetlifyCMS Admin Login</a>
             </p>
         </div>
     </div>
@@ -65,26 +63,6 @@
         display block
         margin 0
         padding 0
-
-    html
-        font-family 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
-        font-size 16px
-        word-spacing 1px
-        -ms-text-size-adjust 100%
-        -webkit-text-size-adjust 100%
-        -moz-osx-font-smoothing grayscale
-        -webkit-font-smoothing antialiased
-        box-sizing border-box
-
-    *, *:before, *:after
-        box-sizing border-box
-        margin 0
-
-    a:link
-        color #41b883
-
-    a:visited
-        color #3b8070
 
     .button--green
         display inline-block

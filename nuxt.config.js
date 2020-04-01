@@ -24,14 +24,18 @@ export default {
         ]
     },
     loading: { color: '#fff' },
-    css: [
-    ],
-    plugins: [
-    ],
+    css: ["@/assets/style/common.styl"],
+    plugins: [],
     modules: [
         '@nuxtjs/markdownit',
-        '@nuxtjs/axios'
+        '@nuxtjs/axios',
+        'nuxt-webfontloader'
     ],
+    webfontloader: {
+        google: {
+            families: ["Noto+Sans+JP:400,700,900&display=swap&subset=japanese"]
+        }
+    },
     markdownit: {
         injected: true,
         preset: 'default',

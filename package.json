@@ -13,7 +13,8 @@
     "dependencies": {
         "@nuxtjs/axios": "^5.9.7",
         "@nuxtjs/markdownit": "^1.2.9",
-        "nuxt": "^2.12.2"
+        "nuxt": "^2.12.2",
+        "nuxt-webfontloader": "^1.1.0"
     },
     "devDependencies": {
         "glob": "^7.1.3",
